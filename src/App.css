@@ -24,6 +24,52 @@
   color: white;
 }
 
+body {
+  background-color: rgb(42, 42, 46);
+}
+
+h1.mainHeader {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  color: white;
+}
+
+.header-container {
+  display: grid;
+  place-content: center;
+  margin-bottom: 3%;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submit-container {
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button.submit-btn {
+  width: 5%;
+  height: 30px;
+  font-size: 120%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+input {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 35%;
+  height: 30px;
+  font-size: 27px;
+  border-radius: 10px;
+}
+
 .App-link {
   color: #61dafb;
 }

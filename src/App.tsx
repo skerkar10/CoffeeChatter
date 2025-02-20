@@ -1,24 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
+import {useState, useEffect} from 'react'
 import './App.css';
 
 function App() {
+  const [email, setEmail] = useState('');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className='header-container'>
+        <h1 className='mainHeader' id='header'>Coffee Chatter</h1>
+      </div>
+      <div className='input-container'>
+        <input id='email' type={email} className="email-input" maxLength={60} onChange={(event) => setEmail(event.target.value)}/>
+      </div>
+      <div className='submit-container'>
+        <button className='submit-btn'>Submit</button>
+      </div>
     </div>
   );
 }
