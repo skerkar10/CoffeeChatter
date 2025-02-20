@@ -46,6 +46,19 @@ h1.mainHeader {
   align-items: center;
 }
 
+.sender-input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+}
+
+form.sender-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .submit-container {
   margin-top: 2%;
   display: flex;
@@ -62,11 +75,33 @@ button.submit-btn {
   border-radius: 10px;
 }
 
-input {
+input.email-input {
   font-family: Arial, Helvetica, sans-serif;
   width: 35%;
   height: 30px;
   font-size: 27px;
+  border-radius: 10px;
+}
+
+input.sender-email-input {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 27px;
+  width: 100%;
+  font-size: 25px;
+  border-radius: 10px;
+}
+
+.settings-container {
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+button.settings-btn {
+  width: 5%;
+  height: 30px;
+  font-size: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
   border-radius: 10px;
 }
 
