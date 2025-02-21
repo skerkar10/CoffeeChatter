@@ -23,10 +23,17 @@ export default function UserSettings() {
       </div>
       <form className='sender-container'>
         <div className='sender-input-container'>
-          <input placeholder='Sender Email...' className='sender-email-input' value={sharedStates.senderEmail} type="email" onChange={(event) => sharedStates.setSenderEmail(event.target.value)} />
+          <input placeholder='Sender Email...'
+            className='sender-email-input'
+            value={sharedStates.senderEmail}
+            type="email" onChange={(event) => sharedStates.setSenderEmail(event.target.value)} />
         </div>
         <div className='template-container'>
-          <textarea className='template-input' spellCheck="true" placeholder='Enter email template' value={sharedStates.template} onChange={(event) => sharedStates.setTemplate(event.target.value)} />
+          <textarea className='template-input'
+            spellCheck="true"
+            placeholder='Enter email template'
+            value={sharedStates.template}
+            onChange={(event) => sharedStates.setTemplate(event.target.value)} />
         </div>
       </form>
     </div>

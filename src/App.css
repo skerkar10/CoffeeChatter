@@ -71,6 +71,31 @@ input.email-input {
   border-radius: 10px;
 }
 
+.reference-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input.reference {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 15%;
+  height: 30px;
+  font-size: 27px;
+  border-radius: 10px;
+  margin-bottom: 2%;
+}
+
+input.company {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 15%;
+  height: 30px;
+  font-size: 27px;
+  border-radius: 10px;
+  margin-bottom: 2%;
+  margin-left: 4.5%;
+}
+
 input.sender-email-input {
   font-family: Arial, Helvetica, sans-serif;
   height: 27px;

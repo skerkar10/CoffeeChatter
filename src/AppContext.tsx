@@ -12,6 +12,10 @@ type AppContextType = {
   setSenderEmail: Dispatch<SetStateAction<string>>;
   template: string;
   setTemplate: Dispatch<SetStateAction<string>>;
+  reference: string;
+  setReference: Dispatch<SetStateAction<string>>;
+  company: string;
+  setCompany: Dispatch<SetStateAction<string>>;
 }
 
 export const AppContext = createContext<AppContextType>({
@@ -20,5 +24,9 @@ export const AppContext = createContext<AppContextType>({
   senderEmail: '',
   setSenderEmail: () => {},
   template: '',
-  setTemplate: () => {}
+  setTemplate: () => {},
+  reference: '',
+  setReference: () => {},
+  company: '',
+  setCompany: () => {}
 });

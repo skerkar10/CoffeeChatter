@@ -11,9 +11,11 @@ function App() {
   const [link, setLink] = useState('');
   const [senderEmail, setSenderEmail] = useState('');
   const [template, setTemplate] = useState('');
+  const [reference, setReference] = useState('');
+  const [company, setCompany] = useState('');
 
   return (
-    <AppContext.Provider value={{link, setLink, senderEmail, setSenderEmail, template, setTemplate}}>
+    <AppContext.Provider value={{link, setLink, senderEmail, setSenderEmail, template, setTemplate, reference, setReference, company, setCompany}}>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<MainPage />} />

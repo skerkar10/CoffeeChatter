@@ -20,8 +20,25 @@ export default function MainPage() {
       <div className='header-container'>
         <h1 className='mainHeader' id='header'>Coffee Chatter</h1>
       </div>
+      <div className='reference-container'>
+        <input type="text" 
+          placeholder='Name/Reference'
+          value={sharedStates.reference}
+          className="reference"
+          onChange={(event) => sharedStates.setReference(event.target.value)} />
+        <input type="text"
+          placeholder='Company'
+          value={sharedStates.company}
+          className="company"
+          onChange={(event) => sharedStates.setCompany(event.target.value)} />
+      </div>
       <div className='input-container'>
-        <input id='email' type="url" className="email-input" placeholder="Enter LinkedIn URL" onChange={(event) => sharedStates.setLink(event.target.value)}/>
+        <input id='link'
+          type="url"
+          className="email-input"
+          value={sharedStates.link}
+          placeholder="Enter LinkedIn URL"
+          onChange={(event) => sharedStates.setLink(event.target.value)}/>
       </div>
       <div className='submit-container'>
         <button className='submit-btn'>Submit</button>
