@@ -46,18 +46,6 @@ h1.mainHeader {
   align-items: center;
 }
 
-.sender-input-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 35%;
-}
-
-form.sender-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .submit-container {
   margin-top: 2%;
@@ -89,11 +77,26 @@ input.sender-email-input {
   width: 100%;
   font-size: 25px;
   border-radius: 10px;
+  width: 20%;
+}
+
+.sender-input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .settings-container {
   padding-left: 10px;
   padding-top: 10px;
+}
+
+
+.template-container {
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 button.settings-btn {
@@ -102,6 +105,14 @@ button.settings-btn {
   font-size: 100%;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
+  border-radius: 10px;
+}
+
+textarea.template-input {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 40%;
+  min-height: 400px;
+  font-size: 19px;
   border-radius: 10px;
 }
 

@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import {useState} from 'react'
 import { useNavigate } from 'react-router-dom';
 
 import './App.css';
+import { AppContext } from './AppContext';
 
 export default function UserSettings() {
   const navigate = useNavigate();
-  const [senderEmail, setSenderEmail] = useState('');
+  const sharedStates = useContext(AppContext);
 
   const handleBackPress = () => {
     navigate('/');
@@ -20,11 +21,12 @@ export default function UserSettings() {
       <div className='header-container'>
         <h1 className='mainHeader'>Settings</h1>
       </div>
-        <form className='sender-container'>
-          <div className='sender-input-container'>
-            <input placeholder='Sender Email...' className='sender-email-input' onChange={(event) => setSenderEmail(event.target.value)} />
-          </div>
-        <div>
+      <form className='sender-container'>
+        <div className='sender-input-container'>
+          <input placeholder='Sender Email...' className='sender-email-input' value={sharedStates.senderEmail} type="email" onChange={(event) => sharedStates.setSenderEmail(event.target.value)} />
+        </div>
+        <div className='template-container'>
+          <textarea className='template-input' spellCheck="true" placeholder='Enter email template' value={sharedStates.template} onChange={(event) => sharedStates.setTemplate(event.target.value)} />
         </div>
       </form>
     </div>
