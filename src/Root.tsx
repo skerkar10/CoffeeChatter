@@ -3,6 +3,8 @@ import {useState, useContext} from 'react'
 import { useNavigate } from 'react-router-dom';
 import './App.css';
 import { AppContext } from './AppContext';
+import { validateInput } from './Utilities/ValidateInput';
+import { formatEmail } from './Utilities/FormatEmail';
 
 export default function MainPage() {
   const sharedStates = useContext(AppContext);
@@ -10,6 +12,11 @@ export default function MainPage() {
 
   const handleUserSettings = () => {
     navigate("/user-settings");
+  }
+
+  const handleSubmitPress = () => {
+    validateInput(sharedStates);
+    formatEmail(sharedStates);
   }
 
   return (
@@ -41,7 +48,7 @@ export default function MainPage() {
           onChange={(event) => sharedStates.setLink(event.target.value)}/>
       </div>
       <div className='submit-container'>
-        <button className='submit-btn'>Submit</button>
+        <button className='submit-btn' onClick={handleSubmitPress}>Submit</button>
       </div>
     </div>
   );
