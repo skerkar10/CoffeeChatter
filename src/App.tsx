@@ -2,7 +2,7 @@ import React from 'react';
 import {useState, useEffect} from 'react'
 import { Route, Routes, Link } from 'react-router-dom';
 import { BrowserRouter } from 'react-router-dom';
-import MainPage from './Root';
+import MainPage from './MainPage';
 import UserSettings from './UserSettings';
 import { AppContext } from './AppContext';
 import './App.css';

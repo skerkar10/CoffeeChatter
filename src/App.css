@@ -55,6 +55,7 @@ h1.mainHeader {
 }
 
 button.submit-btn {
+  cursor: pointer;
   width: 5%;
   height: 30px;
   font-size: 120%;
@@ -125,6 +126,7 @@ input.sender-email-input {
 }
 
 button.settings-btn {
+  cursor: pointer;
   width: 5%;
   height: 30px;
   font-size: 100%;

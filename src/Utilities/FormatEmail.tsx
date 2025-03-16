@@ -1,22 +1,22 @@
 import React from 'react'
 
 export const formatEmail = (sharedStates: any) : string => {
-  const templateWords = sharedStates.template.split(" ");
+  const words = sharedStates.template.split(" ");
   let output = "";
 
-  for (let i = 0; i < templateWords.length; i++) {
-    if (templateWords[i] == "[name]") {
+  for (let i = 0; i < words.length; i++) {
+    if (words[i].toLowerCase() === "[name]") {
       output += sharedStates.name;
       output += " ";
       continue;
     }
-    if (templateWords[i] == "[company]") {
+    if (words[i].toLowerCase() === "[company]") {
       output += sharedStates.company;
       output += " ";
       continue;
     }
 
-    output += templateWords[i];
+    output += words[i];
     output += " ";
   }
 
