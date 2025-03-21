@@ -39,14 +39,6 @@ export default function MainPage() {
           className="company"
           onChange={(event) => sharedStates.setCompany(event.target.value)} />
       </div>
-      <div className='input-container'>
-        <input id='link'
-          type="url"
-          className="email-input"
-          value={sharedStates.link}
-          placeholder="Enter LinkedIn URL"
-          onChange={(event) => sharedStates.setLink(event.target.value)}/>
-      </div>
       <div className='submit-container'>
         <button className='submit-btn' onClick={handleSubmitPress}>Submit</button>
       </div>

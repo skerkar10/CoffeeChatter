@@ -7,8 +7,6 @@ import { createContext, Dispatch } from 'react'
  * needs this stuff
 */
 type AppContextType = {
-  link: string;
-  setLink: Dispatch<SetStateAction<string>>;
   senderEmail: string;
   setSenderEmail: Dispatch<SetStateAction<string>>;
   template: string;
@@ -20,8 +18,6 @@ type AppContextType = {
 }
 
 export const AppContext = createContext<AppContextType>({
-  link: '',
-  setLink: () => {},
   senderEmail: '',
   setSenderEmail: () => {},
   template: '',

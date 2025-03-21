@@ -1,10 +1,6 @@
 import React from 'react'
 
 export const validateInput = (sharedStates: any) => {
-    if (!sharedStates.link) {
-      alert("Please provide a LinkedIn URL");
-      return;
-    }
     if (!sharedStates.reference) {
       alert("Please provide a Name/Reference");
       return;
