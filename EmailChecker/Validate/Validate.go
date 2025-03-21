@@ -77,6 +77,20 @@ func ValidateHandler(w http.ResponseWriter, r *http.Request) {
     Email string `json:"email"`
   }
 
+  w.Header().Set("Access-Control-Allow-Origin", "*")
+
+  if r.Method == "OPTIONS" {
+    w.Header().Set("Access-Control-Allow-Methods", "POST, OPTIONS")
+    w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
+    w.WriteHeader(http.StatusOK)
+  }
+
+  if r.Method != "POST" {
+    w.Header().Set("Content-Type", "text/plain")
+    http.Error(w, "Illegal Method", http.StatusMethodNotAllowed)
+    return
+  }
+
   err := json.NewDecoder(r.Body).Decode(&data)
 
   if (err != nil || data.Email == "") {
