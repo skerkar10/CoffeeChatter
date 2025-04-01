@@ -38,7 +38,7 @@ export default function MainPage() {
     }
 
     setIsLoading(false);
-    alert(emailsToCheck[validIdx]);
+    alert(emailsToCheck[validIdx]); /* We alert for now */
   }
 
   return (

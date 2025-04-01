@@ -1,5 +1,9 @@
 import React from 'react'
 
+/**
+ * Ensures that are necessary form components are appropriately filled out
+ * @param sharedStates Shared state component to track form input
+*/
 export const validateInput = (sharedStates: any) => {
   if (!sharedStates.reference) {
     alert("Please provide a Name/Reference");
