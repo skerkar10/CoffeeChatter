@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import './App.css';
 import { AppContext } from './AppContext';
 import { validateInput } from './Utilities/ValidateInput';
-import { formatEmail } from './Utilities/FormatEmail';
+import { formatTemplates } from './Utilities/FormatTemplates';
 import { FormatReceiverEmail } from './Utilities/FormatReceiverEmail';
 import { IsEmailValid } from './Utilities/IsEmailValid';
 
@@ -22,7 +22,7 @@ export default function MainPage() {
       return;
     }
 
-    formatEmail(sharedStates);
+    formatTemplates(sharedStates);
     e.preventDefault();
     setIsLoading(true);
     const emailsToCheck = FormatReceiverEmail(sharedStates);
@@ -57,12 +57,12 @@ export default function MainPage() {
       </div>
       <div className='reference-container'>
         <input type="text" 
-          placeholder='Name/Reference'
+          placeholder='Enter name/reference...'
           value={sharedStates.reference}
           className="reference"
           onChange={(event) => sharedStates.setReference(event.target.value)} />
         <input type="text"
-          placeholder='Company'
+          placeholder='Enter company...'
           value={sharedStates.company}
           className="company"
           onChange={(event) => sharedStates.setCompany(event.target.value)} />

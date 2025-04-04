@@ -62,8 +62,8 @@ h1.mainHeader {
 
 button.submit-btn {
   cursor: pointer;
-  width: 5%;
   height: 30px;
+  width: 120px;
   font-size: 120%;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
@@ -90,7 +90,7 @@ input.reference {
   height: 30px;
   font-size: 27px;
   border-radius: 10px;
-  margin-bottom: 2%;
+  margin-bottom: 1%;
 }
 
 input.company {
@@ -99,7 +99,7 @@ input.company {
   height: 30px;
   font-size: 27px;
   border-radius: 10px;
-  margin-bottom: 2%;
+  margin-bottom: 1%;
   margin-left: 4.5%;
 }
 
@@ -132,7 +132,7 @@ input.subject-line {
 
 button.settings-btn {
   cursor: pointer;
-  width: 5%;
+  width: 120px;
   height: 30px;
   font-size: 100%;
   font-family: Arial, Helvetica, sans-serif;
