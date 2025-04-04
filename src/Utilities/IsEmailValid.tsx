@@ -7,6 +7,7 @@ import React from 'react';
 */
 export const IsEmailValid = async (email: string) => {
   try {
+    // Hardcoded localhost:8080 we'll need a better way to connect to this
     const res = await fetch("http://localhost:8080/validate", {
       method: "POST",
       headers: {

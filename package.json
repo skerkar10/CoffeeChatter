@@ -1,7 +1,7 @@
 {
-  "homepage": "http://skerkar10.github.io/CoffeeChatter",
+  "homepage": "https://skerkar10.github.io/CoffeeChatter",
   "name": "coffee-chatter",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
