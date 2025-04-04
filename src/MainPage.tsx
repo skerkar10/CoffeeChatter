@@ -52,6 +52,9 @@ export default function MainPage() {
 
   return (
     <div>
+      <head>
+        <title>Coffee Chatter</title>
+      </head>
       <div className='settings-container'>
         <div className='credit-container'>
           <h3 className='credit'>Created by Sahil Kerkar at the University of Michigan</h3>
