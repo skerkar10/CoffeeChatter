@@ -4,46 +4,12 @@ import React from 'react'
  * Replaces placeholders in the email and subject template with information about the recipient
  * @param sharedStates including information to fill template
 */
-export const formatTemplates = (sharedStates: any) => {
-  const splitTemplate = sharedStates.template.split(" ");
-  const splitSubject = sharedStates.subjectLine.split(" ");
-  let newTemplate = "";
-  let newSubject = "";
+export const formatTemplates = (sharedStates: any) : [string, string] => {
+  let newSubject = sharedStates.subjectLine.replaceAll(/\[name\]/gi, `${sharedStates.reference}`);
+  newSubject = newSubject.replaceAll(/\[company\]/gi, `${sharedStates.company}`);
 
-  for (let i = 0; i < splitTemplate.length; i++) {
-    if (splitTemplate[i].toLowerCase() === "[name]") {
-      newTemplate += sharedStates.name;
-      newTemplate += " ";
-      continue;
-    }
+  let newTemplate = sharedStates.template.replaceAll(/\[name\]/gi, `${sharedStates.reference}`);
+  newTemplate = newTemplate.replaceAll(/\[company\]/gi, `${sharedStates.company}`);
 
-    if (splitTemplate[i].toLowerCase() === "[company]") {
-      newTemplate += sharedStates.company;
-      newTemplate += " ";
-      continue;
-    }
-
-    newTemplate += splitTemplate[i];
-    newTemplate += " ";
-  }
-
-  for (let i = 0; i < splitSubject.length; i++) {
-    if (splitSubject[i].toLowerCase() === "[name]") {
-      newSubject += sharedStates.name;
-      newSubject += " ";
-      continue;
-    }
-
-    if (splitSubject[i].toLowerCase() === "[company]") {
-      newSubject += sharedStates.company;
-      newSubject += " ";
-      continue;
-    }
-
-    newSubject += splitSubject[i];
-    newSubject += " ";
-  }
-
-  sharedStates.setTemplate(newTemplate);
-  sharedStates.setSubjectLine(newSubject);
+  return [newSubject, newTemplate];
 }

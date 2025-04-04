@@ -7,6 +7,7 @@ import { validateInput } from './Utilities/ValidateInput';
 import { formatTemplates } from './Utilities/FormatTemplates';
 import { FormatReceiverEmail } from './Utilities/FormatReceiverEmail';
 import { IsEmailValid } from './Utilities/IsEmailValid';
+import { createMailTo } from './Utilities/CreateMailTo';
 
 export default function MainPage() {
   const sharedStates = useContext(AppContext);
@@ -22,7 +23,7 @@ export default function MainPage() {
       return;
     }
 
-    formatTemplates(sharedStates);
+    const templates = formatTemplates(sharedStates);
     e.preventDefault();
     setIsLoading(true);
     const emailsToCheck = FormatReceiverEmail(sharedStates);
@@ -41,7 +42,12 @@ export default function MainPage() {
     }
 
     setIsLoading(false);
+
     const validEmail = emailsToCheck[validIdx];
+
+    const mailingLink = createMailTo(templates, validEmail);
+
+    window.open(mailingLink, "_blank");
   }
 
   return (
