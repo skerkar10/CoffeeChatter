@@ -1,5 +1,10 @@
 import React from 'react';
 
+/**
+ * Creates formats most common email formats using reference and company
+ * @param sharedStates shared state containing company and recipient reference
+ * @returns Array containing most common email formats.
+*/
 export const FormatReceiverEmail = (sharedStates: any): string[] => {
   let emailOptions = [];
 

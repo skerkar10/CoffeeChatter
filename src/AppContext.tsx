@@ -7,8 +7,8 @@ import { createContext, Dispatch } from 'react'
  * needs this stuff
 */
 type AppContextType = {
-  senderEmail: string;
-  setSenderEmail: Dispatch<SetStateAction<string>>;
+  subjectLine: string;
+  setSubjectLine: Dispatch<SetStateAction<string>>;
   template: string;
   setTemplate: Dispatch<SetStateAction<string>>;
   reference: string;
@@ -18,8 +18,8 @@ type AppContextType = {
 }
 
 export const AppContext = createContext<AppContextType>({
-  senderEmail: '',
-  setSenderEmail: () => {},
+  subjectLine: '',
+  setSubjectLine: () => {},
   template: '',
   setTemplate: () => {},
   reference: '',

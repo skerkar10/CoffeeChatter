@@ -8,13 +8,13 @@ import { AppContext } from './AppContext';
 import './App.css';
 
 function App() {
-  const [senderEmail, setSenderEmail] = useState('');
+  const [subjectLine, setSubjectLine] = useState('');
   const [template, setTemplate] = useState('');
   const [reference, setReference] = useState('');
   const [company, setCompany] = useState('');
 
   return (
-    <AppContext.Provider value={{senderEmail, setSenderEmail, template, setTemplate, reference, setReference, company, setCompany}}>
+    <AppContext.Provider value={{subjectLine, setSubjectLine, template, setTemplate, reference, setReference, company, setCompany}}>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<MainPage />} />

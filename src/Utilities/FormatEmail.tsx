@@ -1,5 +1,10 @@
 import React from 'react'
 
+/**
+ * Replaces placeholders in the template email with information about the recipient
+ * @param sharedStates including information to fill template
+ * @returns Formulated template
+*/
 export const formatEmail = (sharedStates: any) : string => {
   const words = sharedStates.template.split(" ");
   let output = "";

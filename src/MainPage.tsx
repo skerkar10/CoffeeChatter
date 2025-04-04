@@ -18,7 +18,10 @@ export default function MainPage() {
   }
 
   const handleSubmitPress = async (e: any) => {
-    validateInput(sharedStates);
+    if (!validateInput(sharedStates)) {
+      return;
+    }
+
     formatEmail(sharedStates);
     e.preventDefault();
     setIsLoading(true);
@@ -38,7 +41,7 @@ export default function MainPage() {
     }
 
     setIsLoading(false);
-    alert(emailsToCheck[validIdx]); /* We alert for now */
+    const validEmail = emailsToCheck[validIdx];
   }
 
   return (
@@ -48,6 +51,9 @@ export default function MainPage() {
       </div>
       <div className='header-container'>
         <h1 className='mainHeader' id='header'>Coffee Chatter</h1>
+      </div>
+      <div className='subtitle-container'>
+        <h3 className='subtitle'>Your open source solution to networking!</h3>
       </div>
       <div className='reference-container'>
         <input type="text" 

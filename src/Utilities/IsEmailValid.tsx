@@ -1,5 +1,10 @@
 import React from 'react';
 
+/**
+ * Checks whether email is valid or not
+ * @param email Email to verify existence
+ * @returns boolean indicating validity of email
+*/
 export const IsEmailValid = async (email: string) => {
   try {
     const res = await fetch("http://localhost:8080/validate", {
