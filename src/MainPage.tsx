@@ -53,6 +53,9 @@ export default function MainPage() {
   return (
     <div>
       <div className='settings-container'>
+        <div className='credit-container'>
+          <h3 className='credit'>Created by Sahil Kerkar at the University of Michigan</h3>
+        </div>
         <button className='settings-btn' onClick={handleUserSettings}>Settings</button>
       </div>
       <div className='header-container'>
