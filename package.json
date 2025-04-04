@@ -1,5 +1,5 @@
 {
-  "homepage": "https://skerkar10.github.io/CoffeeChatter",
+  "homepage": "http://skerkar10.github.io/CoffeeChatter",
   "name": "coffee-chatter",
   "version": "0.1.1",
   "private": true,
@@ -21,11 +21,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
