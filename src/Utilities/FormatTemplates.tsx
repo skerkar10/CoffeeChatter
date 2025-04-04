@@ -5,11 +5,17 @@ import React from 'react'
  * @param sharedStates including information to fill template
 */
 export const formatTemplates = (sharedStates: any) : [string, string] => {
-  let newSubject = sharedStates.subjectLine.replaceAll(/\[name\]/gi, `${sharedStates.reference}`);
-  newSubject = newSubject.replaceAll(/\[company\]/gi, `${sharedStates.company}`);
+  const names = sharedStates.reference.split(" ");
+  let company = sharedStates.company;
+  company = company[0].toUpperCase() + company.slice(1);
 
-  let newTemplate = sharedStates.template.replaceAll(/\[name\]/gi, `${sharedStates.reference}`);
-  newTemplate = newTemplate.replaceAll(/\[company\]/gi, `${sharedStates.company}`);
+  let newSubject = sharedStates.subjectLine.replaceAll(/\[fname\]/gi, `${names[0]}`);
+  newSubject = newSubject.replaceAll(/\[lname\]/gi, `${names[1]}`);
+  newSubject = newSubject.replaceAll(/\[company\]/gi, `${company}`);
+
+  let newTemplate = sharedStates.template.replaceAll(/\[fname\]/gi, `${names[0]}`);
+  newTemplate = newTemplate.replaceAll(/\[lname\]/gi, `${names[1]}`);
+  newTemplate = newTemplate.replaceAll(/\[company\]/gi, `${company}`);
 
   return [newSubject, newTemplate];
 }
