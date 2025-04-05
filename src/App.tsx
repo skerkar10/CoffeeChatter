@@ -15,7 +15,7 @@ function App() {
 
   return (
     <AppContext.Provider value={{subjectLine, setSubjectLine, template, setTemplate, reference, setReference, company, setCompany}}>
-      <BrowserRouter>
+      <BrowserRouter basename='/coffee-chatter'>
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path='/user-settings' element={<UserSettings />} />
