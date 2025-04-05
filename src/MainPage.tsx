@@ -30,10 +30,21 @@ export default function MainPage() {
     let validIdx = -1;
 
     for (let i = 0; i < emailsToCheck.length; i++) {
-      if (await IsEmailValid(emailsToCheck[i])) {
-        validIdx = i;
-        break;
+      const response = await IsEmailValid(emailsToCheck[i]);
+
+      if (response == "NC") {
+        alert("Failed to connect to backend!");
+        return;
       }
+
+      if (response == 'N') {
+        continue;
+      }
+
+      if (response) {
+        validIdx = i;
+      }
+
     }
 
     if (validIdx === -1) {

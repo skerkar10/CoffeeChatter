@@ -15,6 +15,9 @@ export default function UserSettings() {
 
   return (
     <div>
+      <head>
+        <title>Settings</title>
+      </head>
       <div className='settings-container'>
         <button className='settings-btn' onClick={handleBackPress}>Back</button>
       </div>
